@@ -4,7 +4,7 @@ These are the slides used for all Building the Web workshops.
 
 ## View the Slideshow
 
-A live version of the slide deck is hosted on GitHub [here](??).
+A live version of the slide deck is hosted on GitHub [here](http://nzgather.github.io/Building-the-Web).
 
 You can jump to the following sections:
 
