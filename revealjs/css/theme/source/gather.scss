@@ -1,0 +1,162 @@
+/**
+ * Gather Workshops theme for reveal.js.
+ * Author: Gather Workshops
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts -----------------
+@import url("http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic");
+// ---------------------------------------------
+
+
+
+// Override theme settings -----------------
+// (see ../template/settings.scss)
+
+// Background of the presentation
+$backgroundColor: #F3F3DA;
+
+// Primary/body text
+$mainFont: 'Karla', sans-serif;
+$mainFontSize: 1.75em;
+$mainColor: #001E39;
+
+// Headings
+$headingMargin: 0 0 20px 0;
+$headingFont: 'Karla', sans-serif;
+$headingColor: #001E39;
+$headingLineHeight: 0.9em;
+$headingLetterSpacing: auto;
+$headingTextTransform: none;
+$headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
+$heading1TextShadow: $headingTextShadow;
+
+// Links and actions
+$linkColor: #DE320B;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: #FF5E99;
+$selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+	background: $backgroundColor;
+}
+// ---------------------------------------------
+
+
+
+// Create custom variables -------------
+
+$titleTextShadow: 2px 2px 1px rgb(134,32,26);
+
+
+// ----------------------------
+
+
+// Write custom hard-coded overrides -----------------
+
+
+.reveal {
+
+	section p {
+		margin-top: 1em;
+		margin-bottom: 0.4em;
+	}
+
+	section img {
+		border: 0 !important;
+		box-shadow: none !important;
+	}
+
+	pre {
+		margin: 0 0;
+		margin-bottom: 1em;
+		font-size: 1.2em;
+		width: 100%;
+
+		code {
+			padding: 10px;
+			font-size: inherit;
+			background-color: #3F3F3F;
+		}
+	}
+
+	code {
+		font-size: 120%;
+		background-color: rgba(255,255,255,0.8);
+		padding: 6px;
+	}
+
+	.default-slide {
+		line-height: 1.4;
+		text-align: left;
+
+		&.centered {
+			text-align: center;
+		}
+
+		h2 {
+			font-size: 1.8em;
+			font-weight: bold;
+			border-bottom: none;
+			padding-top: 100px;
+			padding-bottom: 30px;
+
+			text-transform: uppercase;
+			padding: 0.1em 0.5em;
+			background: rgb(220,226,177);
+			margin-left: -0.5em;
+			margin-bottom: 1.5em;
+			display: inline-block;
+			position: relative;
+			top: 20px;
+
+			/*&:before, &:after {
+				content: "";
+				position: absolute;
+				display: block;
+				border-style: solid;
+				border-color: rgb(220,226,177) transparent transparent transparent;
+				top: 0;
+				left: 100%;
+				border-width: 1em;
+				margin-left: -1em;
+			}
+
+			&:after {
+				border-color: transparent transparent rgb(220,226,177)  transparent;
+				bottom: 0;
+				top: auto;
+			}*/
+		}
+	}
+
+	.title-slide {
+	  	color: #DCE3B2;
+		text-shadow: $titleTextShadow;
+
+		h1, h2, h3 {
+			color: #DCE3B2;
+			font-weight: bold;
+			text-shadow: $titleTextShadow;
+		}
+	}
+
+}
+
+// ---------------------------------------------
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
